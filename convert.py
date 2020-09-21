@@ -36,8 +36,15 @@ def deleteOldStuff(folder,name):
     except:
         print("! No swf file to delete !")
 
-    os.remove(folder+'/'+name+'.js')
-    os.remove(folder+'/'+name+'.html')
+    try:
+        os.remove(folder+'/'+name+'.js')
+    except:
+        print("! No js file to delete !")
+
+    try:
+        os.remove(folder+'/'+name+'.html')
+    except:
+        print("! No html file to delete !")
 
 #Creamos el nuevo js copiando el modelo
 def newJs(folder):
